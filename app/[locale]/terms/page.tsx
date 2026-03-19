@@ -20,6 +20,14 @@ export default async function TermsPage({ params }: { params: Promise<Params> })
       <section className="legal-block">
         <p>{content.legal.termsBody}</p>
       </section>
+      {content.legal.termsSections.map((section) => (
+        <section key={section.heading} className="legal-block">
+          <h2>{section.heading}</h2>
+          {section.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </section>
+      ))}
     </main>
   );
 }

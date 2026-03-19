@@ -34,4 +34,32 @@ describe("legal copy", () => {
     expect(enRefundFaq?.answer).toContain("Paddle");
     expect(enRefundFaq?.answer).toMatch(/7/);
   });
+
+  it("expands privacy and terms into standard structured sections", () => {
+    const zh = getContent("zh").legal;
+    const en = getContent("en").legal;
+
+    expect(zh.privacySections.length).toBeGreaterThanOrEqual(5);
+    expect(en.privacySections.length).toBeGreaterThanOrEqual(5);
+    expect(zh.termsSections.length).toBeGreaterThanOrEqual(5);
+    expect(en.termsSections.length).toBeGreaterThanOrEqual(5);
+
+    expect(en.privacySections.map((section) => section.heading)).toEqual(
+      expect.arrayContaining([
+        "What Information We Collect",
+        "How We Use Information",
+        "Payments Through Paddle"
+      ])
+    );
+    expect(zh.privacySections.map((section) => section.heading)).toEqual(
+      expect.arrayContaining(["我们收集的信息", "信息的使用方式", "通过 Paddle 处理付款"])
+    );
+
+    expect(en.termsSections.map((section) => section.heading)).toEqual(
+      expect.arrayContaining(["Who These Terms Apply To", "License and Permitted Use", "Payments and Refunds"])
+    );
+    expect(zh.termsSections.map((section) => section.heading)).toEqual(
+      expect.arrayContaining(["条款适用范围", "许可与允许的使用方式", "付款与退款"])
+    );
+  });
 });

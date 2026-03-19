@@ -20,6 +20,14 @@ export default async function PrivacyPage({ params }: { params: Promise<Params> 
       <section className="legal-block">
         <p>{content.legal.privacyBody}</p>
       </section>
+      {content.legal.privacySections.map((section) => (
+        <section key={section.heading} className="legal-block">
+          <h2>{section.heading}</h2>
+          {section.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </section>
+      ))}
     </main>
   );
 }

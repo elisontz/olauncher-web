@@ -247,11 +247,22 @@ h1 {
   max-width: none;
 }
 
+.legal-block h2 {
+  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+  max-width: none;
+  margin: 0;
+}
+
 .legal-block {
   border-radius: 28px;
   padding: 24px;
   display: grid;
   gap: 14px;
+}
+
+.legal-block p {
+  margin: 0;
+  line-height: 1.7;
 }
 
 @media (max-width: 720px) {
