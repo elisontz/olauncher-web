@@ -339,17 +339,25 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+  align-items: stretch;
 }
 
-.pricing-plan {
+.pricing-card {
   display: grid;
-  gap: 16px;
-  padding: 22px 0 0;
-  border-top: 1px solid var(--line-strong);
+  gap: 22px;
+  padding: 28px;
+  border-radius: 30px;
+  border: 1px solid rgba(26, 35, 48, 0.08);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 46px rgba(25, 34, 48, 0.06);
 }
 
-.pricing-plan-featured {
-  border-top-color: rgba(30, 79, 215, 0.28);
+.pricing-card-featured {
+  border-color: rgba(30, 79, 215, 0.18);
+  background:
+    radial-gradient(circle at top right, rgba(30, 79, 215, 0.08), transparent 28%),
+    rgba(255, 255, 255, 0.92);
+  box-shadow: 0 22px 60px rgba(30, 79, 215, 0.08);
 }
 
 .pricing-head {
@@ -365,7 +373,7 @@ h1 {
 }
 
 .pricing-badge {
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 999px;
   background: var(--brand-soft);
   color: var(--brand);
@@ -398,7 +406,26 @@ h1 {
 
 .pricing-features {
   display: grid;
-  gap: 8px;
+  gap: 12px;
+  margin: 0;
+}
+
+.pricing-features li::marker {
+  color: var(--brand);
+}
+
+.pricing-button {
+  justify-self: stretch;
+  min-height: 56px;
+  border-radius: 18px;
+  background: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+.pricing-button-featured {
+  background: linear-gradient(135deg, #1f53da 0%, #2f6fff 100%);
+  border-color: transparent;
 }
 
 .site-footer {

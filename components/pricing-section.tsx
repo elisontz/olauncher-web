@@ -35,7 +35,7 @@ export function PricingSection({ heading, subtitle, tiers, ctaLabel, recommended
         {tiers.map((tier) => (
           <article
             key={tier.name}
-            className={tier.priceId === recommendedTier ? "pricing-plan pricing-plan-featured" : "pricing-plan"}
+            className={tier.priceId === recommendedTier ? "pricing-card pricing-card-featured" : "pricing-card"}
           >
             <div className="pricing-head">
               <div>
@@ -53,7 +53,11 @@ export function PricingSection({ heading, subtitle, tiers, ctaLabel, recommended
                 <li key={feature}>{feature}</li>
               ))}
             </ul>
-            <BuyButton label={ctaLabel} priceId={priceIdMap[tier.priceId]} className="pricing-button" />
+            <BuyButton
+              label={ctaLabel}
+              priceId={priceIdMap[tier.priceId]}
+              className={tier.priceId === recommendedTier ? "pricing-button pricing-button-featured" : "pricing-button"}
+            />
           </article>
         ))}
       </div>

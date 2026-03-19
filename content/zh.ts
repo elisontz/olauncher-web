@@ -93,7 +93,7 @@ const zh = {
         originalPrice: "$7.99",
         description: "适合主力只有一台 Mac 的个人用户。",
         priceId: "single",
-        features: ["1 台 Mac 授权", "购买主版本线内的终身更新", "全部 PRO 功能"]
+        features: ["1 台 Mac 授权", "终身更新", "全部 PRO 功能"]
       },
       {
         name: "双设备终身版",
@@ -101,7 +101,7 @@ const zh = {
         originalPrice: "$13.99",
         description: "适合同时使用两台 Mac 的用户。",
         priceId: "double",
-        features: ["2 台 Mac 授权", "购买主版本线内的终身更新", "全部 PRO 功能"]
+        features: ["2 台 Mac 授权", "终身更新", "全部 PRO 功能"]
       }
     ]
   },

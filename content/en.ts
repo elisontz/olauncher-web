@@ -93,7 +93,7 @@ const en = {
         originalPrice: "$7.99",
         description: "Best for one daily Mac.",
         priceId: "single",
-        features: ["1 Mac license", "Lifetime updates for the purchased major line", "All PRO features"]
+        features: ["1 Mac license", "Lifetime updates", "All PRO features"]
       },
       {
         name: "Two Devices Lifetime",
@@ -101,7 +101,7 @@ const en = {
         originalPrice: "$13.99",
         description: "For people who switch between two Macs.",
         priceId: "double",
-        features: ["2 Mac licenses", "Lifetime updates for the purchased major line", "All PRO features"]
+        features: ["2 Mac licenses", "Lifetime updates", "All PRO features"]
       }
     ]
   },
