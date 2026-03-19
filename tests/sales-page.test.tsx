@@ -16,6 +16,7 @@ describe("SalesPage", () => {
     expect(screen.getByRole("heading", { name: /双档终身授权/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /常见问题/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /安装与激活/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /退款政策/i })).toHaveAttribute("href", "/zh/refund");
   });
 
   it("renders the English mirror page with both lifetime tiers", () => {
@@ -28,5 +29,6 @@ describe("SalesPage", () => {
     expect(screen.getAllByText("$5.99").length).toBeGreaterThan(0);
     expect(screen.getAllByText("$9.99").length).toBeGreaterThan(0);
     expect(screen.getAllByRole("button", { name: /Unlock PRO|Buy PRO/i })).toHaveLength(3);
+    expect(screen.getByRole("link", { name: /Refund Policy/i })).toHaveAttribute("href", "/en/refund");
   });
 });

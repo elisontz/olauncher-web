@@ -18,6 +18,7 @@ describe("site locale helpers", () => {
   it("builds localized routes with Chinese as the default root", () => {
     expect(getLocalizedPath("zh", "")).toBe("/zh");
     expect(getLocalizedPath("zh", "release")).toBe("/zh/release");
+    expect(getLocalizedPath("zh", "refund")).toBe("/zh/refund");
     expect(getLocalizedPath("en", "")).toBe("/en");
     expect(getLocalizedPath("en", "terms")).toBe("/en/terms");
   });

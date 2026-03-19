@@ -107,7 +107,8 @@ const en = {
     releaseHref: "/en/release",
     releaseText: "Release notes",
     privacyText: "Privacy Policy",
-    termsText: "Terms of Service"
+    termsText: "Terms of Service",
+    refundText: "Refund Policy"
   },
   legal: {
     privacyTitle: "Privacy Policy",
@@ -115,7 +116,10 @@ const en = {
       "oLauncher Site collects only the data required to run the website, process payments through Paddle, and answer support requests.",
     termsTitle: "Terms of Service",
     termsBody:
-      "Purchasing a license grants the right to activate oLauncher on the number of Macs included in the purchased tier."
+      "These Terms apply to the products and services provided under the trading name oLauncher. Purchasing a license grants the right to activate oLauncher on the number of Macs included in the purchased tier.",
+    refundTitle: "Refund Policy",
+    refundBody:
+      "If you purchase oLauncher and run into activation failures, duplicate charges, or a technical issue that we cannot resolve, contact support to request a refund. Include your purchase email, receipt details, and a short description of the issue so we can review the case."
   },
   release: {
     title: "Release Notes",

@@ -56,6 +56,7 @@ export function SalesPage({ locale }: SalesPageProps) {
           releaseText={content.footer.releaseText}
           privacyText={content.footer.privacyText}
           termsText={content.footer.termsText}
+          refundText={content.footer.refundText}
           supportEmail={siteConfig.supportEmail}
           currentVersion={siteConfig.currentVersion}
           releaseDate={siteConfig.releaseDate}

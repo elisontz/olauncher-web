@@ -107,7 +107,8 @@ const zh = {
     releaseHref: "/zh/release",
     releaseText: "更新日志",
     privacyText: "隐私政策",
-    termsText: "使用条款"
+    termsText: "使用条款",
+    refundText: "退款政策"
   },
   legal: {
     privacyTitle: "隐私政策",
@@ -115,7 +116,10 @@ const zh = {
       "oLauncher Site 仅收集运行官网、通过 Paddle 处理支付，以及回复支持请求所需的必要信息。",
     termsTitle: "使用条款",
     termsBody:
-      "购买授权后，你可以在所购买档位对应数量的 Mac 设备上激活并使用 oLauncher。"
+      "这些条款适用于以 oLauncher 名义提供的产品与服务。购买授权后，你可以在所购买档位对应数量的 Mac 设备上激活并使用 oLauncher。",
+    refundTitle: "退款政策",
+    refundBody:
+      "如果您购买 oLauncher 后遇到无法激活、重复扣费或我们无法协助解决的技术问题，请通过支持邮箱提交退款申请，并附上购买邮箱、收据与问题说明。我们会根据实际情况进行审核与处理。"
   },
   release: {
     title: "更新日志",

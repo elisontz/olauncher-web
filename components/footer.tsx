@@ -9,6 +9,7 @@ type FooterProps = {
   releaseText: string;
   privacyText: string;
   termsText: string;
+  refundText: string;
   supportEmail: string;
   currentVersion: string;
   releaseDate: string;
@@ -21,6 +22,7 @@ export function Footer({
   releaseText,
   privacyText,
   termsText,
+  refundText,
   supportEmail,
   currentVersion,
   releaseDate
@@ -38,6 +40,7 @@ export function Footer({
         <Link href={releaseHref}>{releaseText}</Link>
         <Link href={`/${locale}/privacy`}>{privacyText}</Link>
         <Link href={`/${locale}/terms`}>{termsText}</Link>
+        <Link href={`/${locale}/refund`}>{refundText}</Link>
         <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
       </div>
     </footer>
