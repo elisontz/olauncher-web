@@ -90,7 +90,7 @@ const zh = {
     },
     {
       question: "如何联系支持？",
-      answer: "请发送邮件至 support@olauncher.app，并附上 App 版本号和购买邮箱。"
+      answer: "请发送邮件至 elisonyung@gmail.com，并附上 App 版本号和购买邮箱。"
     }
   ],
   install: {
@@ -153,7 +153,7 @@ const zh = {
       {
         heading: "联系我们",
         paragraphs: [
-          "如果你对本隐私政策有疑问，或希望就你的信息与我们联系，请发送邮件至 support@olauncher.app。"
+          "如果你对本隐私政策有疑问，或希望就你的信息与我们联系，请发送邮件至 elisonyung@gmail.com。"
         ]
       }
     ],
@@ -200,7 +200,7 @@ const zh = {
         heading: "责任与联系",
         paragraphs: [
           "在适用法律允许的最大范围内，oLauncher 及官网按现状和可用状态提供。对于因使用官网或软件产生的间接或后果性损失，我们不承担责任。",
-          "如果你对这些条款有法律或支持相关问题，请发送邮件至 support@olauncher.app。"
+          "如果你对这些条款有法律或支持相关问题，请发送邮件至 elisonyung@gmail.com。"
         ]
       }
     ],

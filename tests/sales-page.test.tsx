@@ -1,10 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it, vi } from "vitest";
-
-vi.mock("next/script", () => ({
-  default: () => null
-}));
+import { describe, expect, it } from "vitest";
 
 import { SalesPage } from "@/components/sales-page";
 

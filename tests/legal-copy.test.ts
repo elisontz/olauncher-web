@@ -62,4 +62,16 @@ describe("legal copy", () => {
       expect.arrayContaining(["条款适用范围", "许可与允许的使用方式", "付款与退款"])
     );
   });
+
+  it("uses the unified public contact email in both locales", () => {
+    const zh = getContent("zh");
+    const en = getContent("en");
+
+    expect(zh.faqs.find((faq) => faq.question.includes("联系"))?.answer).toContain("elisonyung@gmail.com");
+    expect(en.faqs.find((faq) => faq.question.includes("contact"))?.answer).toContain("elisonyung@gmail.com");
+    expect(zh.legal.privacySections.at(-1)?.paragraphs.join(" ")).toContain("elisonyung@gmail.com");
+    expect(en.legal.privacySections.at(-1)?.paragraphs.join(" ")).toContain("elisonyung@gmail.com");
+    expect(zh.legal.termsSections.at(-1)?.paragraphs.join(" ")).toContain("elisonyung@gmail.com");
+    expect(en.legal.termsSections.at(-1)?.paragraphs.join(" ")).toContain("elisonyung@gmail.com");
+  });
 });

@@ -25,7 +25,7 @@ function requiredEnv(name: string, fallback: string): string {
 export const siteConfig = {
   productName: "oLauncher",
   currentVersion: requiredEnv("NEXT_PUBLIC_CURRENT_VERSION", "1.0.2"),
-  supportEmail: requiredEnv("NEXT_PUBLIC_SUPPORT_EMAIL", "support@olauncher.app"),
+  supportEmail: requiredEnv("NEXT_PUBLIC_SUPPORT_EMAIL", "elisonyung@gmail.com"),
   downloadUrl: requiredEnv(
     "NEXT_PUBLIC_DOWNLOAD_URL",
     "https://downloads.olauncher.app/stable/oLauncher-20260319.dmg"

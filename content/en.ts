@@ -90,7 +90,7 @@ const en = {
     },
     {
       question: "How do I contact support?",
-      answer: "Send mail to support@olauncher.app and include your app version plus purchase email if relevant."
+      answer: "Send mail to elisonyung@gmail.com and include your app version plus purchase email if relevant."
     }
   ],
   install: {
@@ -153,7 +153,7 @@ const en = {
       {
         heading: "Contact",
         paragraphs: [
-          "If you have questions about this Privacy Policy or want to contact us about your information, email support@olauncher.app."
+          "If you have questions about this Privacy Policy or want to contact us about your information, email elisonyung@gmail.com."
         ]
       }
     ],
@@ -200,7 +200,7 @@ const en = {
         heading: "Liability and Contact",
         paragraphs: [
           "oLauncher and the website are provided on an as-available basis. To the maximum extent permitted by law, we are not liable for indirect or consequential losses arising from use of the website or software.",
-          "If you have legal or support questions about these Terms, contact support@olauncher.app."
+          "If you have legal or support questions about these Terms, contact elisonyung@gmail.com."
         ]
       }
     ],

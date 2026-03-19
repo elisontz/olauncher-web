@@ -27,6 +27,6 @@ describe("site locale helpers", () => {
     expect(localeLabels.zh).toBeTruthy();
     expect(localeLabels.en).toBeTruthy();
     expect(siteConfig.currentVersion).toBeTruthy();
-    expect(siteConfig.supportEmail).toContain("@");
+    expect(siteConfig.supportEmail).toBe("elisonyung@gmail.com");
   });
 });
