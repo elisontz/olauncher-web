@@ -7,6 +7,7 @@ import {
   normalizeLocale,
   siteConfig
 } from "@/lib/site";
+import { getContent } from "@/content";
 
 describe("site locale helpers", () => {
   it("normalizes unknown locales back to Chinese", () => {
@@ -28,5 +29,23 @@ describe("site locale helpers", () => {
     expect(localeLabels.en).toBeTruthy();
     expect(siteConfig.currentVersion).toBeTruthy();
     expect(siteConfig.supportEmail).toBe("elisonyung@gmail.com");
+  });
+
+  it("exposes redesigned homepage content blocks in both locales", () => {
+    const zh = getContent("zh");
+    const en = getContent("en");
+
+    expect(zh.hero.badges).toHaveLength(4);
+    expect(en.hero.badges).toHaveLength(4);
+    expect(zh.hero.visualTiles.length).toBeGreaterThanOrEqual(8);
+    expect(en.hero.visualTiles.length).toBeGreaterThanOrEqual(8);
+    expect(zh.proofItems).toHaveLength(4);
+    expect(en.proofItems).toHaveLength(4);
+    expect(zh.featureHighlights.length).toBeGreaterThanOrEqual(5);
+    expect(en.featureHighlights.length).toBeGreaterThanOrEqual(5);
+    expect(zh.experienceSteps).toHaveLength(3);
+    expect(en.experienceSteps).toHaveLength(3);
+    expect(zh.pricing.recommendedTier).toBeDefined();
+    expect(en.pricing.recommendedTier).toBeDefined();
   });
 });

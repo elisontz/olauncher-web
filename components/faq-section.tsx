@@ -5,17 +5,17 @@ type FaqSectionProps = {
 
 export function FaqSection({ heading, faqs }: FaqSectionProps) {
   return (
-    <section className="section-block">
-      <div className="section-copy">
-        <p className="section-label">FAQ</p>
+    <section className="section-shell">
+      <div className="section-heading">
+        <p className="section-kicker">FAQ</p>
         <h2>{heading}</h2>
       </div>
       <div className="faq-list">
         {faqs.map((faq) => (
-          <article key={faq.question} className="faq-item">
-            <h3>{faq.question}</h3>
+          <details key={faq.question} className="faq-item">
+            <summary>{faq.question}</summary>
             <p>{faq.answer}</p>
-          </article>
+          </details>
         ))}
       </div>
     </section>

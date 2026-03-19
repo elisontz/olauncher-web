@@ -6,43 +6,76 @@ const zh = {
       "一个轻量的第三方应用启动台，让仍然依赖视觉浏览的 Mac 用户在 macOS 26 上找回熟悉的启动体验。"
   },
   hero: {
-    title: "恢复 macOS 26 上熟悉的 Launchpad 风格体验",
-    subtitle:
-      "oLauncher 把很多人依然离不开的视觉化启动方式、空间记忆和原生交互感，重新带回 macOS 26。",
+    title: "找回 Launchpad",
+    subtitle: "在 macOS 26 上",
+    description:
+      "oLauncher 把很多人依然离不开的视觉浏览、空间记忆和原生节奏，重新带回 macOS 的日常使用里。",
     primaryCta: "免费下载",
     secondaryCta: "解锁 PRO",
-    meta: "支持 macOS 26 及更高版本"
+    meta: "支持 macOS 26 及更高版本",
+    badges: ["手势优先", "空间记忆", "原生手感", "终身解锁"],
+    visualTiles: [
+      { label: "访达", tone: "blue", size: "wide" },
+      { label: "Safari", tone: "silver", size: "square" },
+      { label: "备忘录", tone: "amber", size: "square" },
+      { label: "邮件", tone: "blue", size: "square" },
+      { label: "日历", tone: "silver", size: "square" },
+      { label: "音乐", tone: "amber", size: "wide" },
+      { label: "Arc", tone: "blue", size: "square" },
+      { label: "Xcode", tone: "silver", size: "square" }
+    ]
   },
-  featureHeading: "为仍然习惯视觉启动应用的人而做",
-  features: [
+  proofItems: [
+    { label: "macOS 26", detail: "为 Tahoe 时代的桌面节奏而做" },
+    { label: "Trackpad Gesture", detail: "用熟悉的手势再次唤起启动台" },
+    { label: "Hot Corners", detail: "不用打断当前任务就能立即进入" },
+    { label: "Lifetime License", detail: "一次购买，解锁全部 PRO 功能" }
+  ],
+  featureHeading: "Launchpad 回归后的体验",
+  featureIntro:
+    "重点不是把旧功能机械搬回来，而是把大家真正依赖的视觉记忆、快速触发和原生网格体验重新打磨好。",
+  featureHighlights: [
     {
+      eyebrow: "核心体验",
       title: "更自然的手势唤起",
-      description: "通过触控板手势唤起启动台，让熟悉的空间记忆继续有效。"
+      description: "通过触控板手势唤起启动台，让熟悉的空间记忆继续有效。",
+      size: "large"
     },
     {
+      eyebrow: "快速入口",
       title: "快捷键与触发角",
-      description: "支持快捷键和触发角，减少在不同启动方式之间切换的成本。"
+      description: "支持快捷键和触发角，减少在不同启动方式之间切换的成本。",
+      size: "small"
     },
     {
+      eyebrow: "自由布局",
       title: "可自定义网格布局",
-      description: "根据自己的显示习惯调整密度与间距，不再被系统默认布局束缚。"
+      description: "根据自己的显示习惯调整密度与间距，不再被系统默认布局束缚。",
+      size: "small"
     },
     {
+      eyebrow: "干净首页",
       title: "隐藏不需要的应用",
-      description: "把不常用工具隐藏起来，让首页保持干净、可扫描。"
+      description: "把不常用工具隐藏起来，让首页保持干净、可扫描。",
+      size: "small"
     },
     {
+      eyebrow: "更快识别",
       title: "重命名与整理",
-      description: "用更符合你记忆方式的名称和组织方式管理应用。"
+      description: "用更符合你记忆方式的名称和组织方式管理应用。",
+      size: "small"
     },
     {
+      eyebrow: "原生构建",
       title: "原生、轻量、顺手",
-      description: "基于 Swift 开发，尽量保持低开销和贴近系统的使用手感。"
+      description: "基于 Swift 开发，尽量保持低开销和贴近系统的使用手感。",
+      size: "small"
     }
   ],
   pricing: {
     heading: "双档终身授权",
-    subtitle: "买断一次，解锁全部 PRO 功能，根据你的设备数量选择即可。",
+    subtitle: "买断一次，解锁全部 PRO 功能，按照你实际会切换的 Mac 数量来选即可。",
+    recommendedTier: "double",
     tiers: [
       {
         name: "单设备终身版",
@@ -93,15 +126,23 @@ const zh = {
       answer: "请发送邮件至 elisonyung@gmail.com，并附上 App 版本号和购买邮箱。"
     }
   ],
-  install: {
-    heading: "安装与激活",
-    steps: [
-      "下载最新 DMG 安装包。",
-      "将 oLauncher 拖入 Applications。",
-      "打开 App，完成首次基础设置。",
-      "输入 License Key 解锁 PRO。"
-    ]
-  },
+  experienceHeading: "三步切回熟悉节奏",
+  experienceIntro:
+    "安装过程和产品本身一样克制。下载、拖入、激活，几分钟内就能回到熟悉的启动方式。",
+  experienceSteps: [
+    {
+      title: "下载最新 DMG 安装包",
+      description: "直接从官网获取已公证版本，安装路径保持简单清晰。"
+    },
+    {
+      title: "拖入 Applications",
+      description: "像普通 Mac 应用一样安装，首次打开后完成简短的基础设置。"
+    },
+    {
+      title: "输入 License Key 解锁 PRO",
+      description: "粘贴许可证、激活已购买的设备数量，然后继续用你熟悉的启动节奏。"
+    }
+  ],
   footer: {
     releaseLabel: "最近更新",
     releaseHref: "/zh/release",

@@ -29,12 +29,12 @@ export function Footer({
 }: FooterProps) {
   return (
     <footer className="site-footer">
-      <div>
+      <div className="footer-brand">
         <p className="eyebrow">oLauncher</p>
+        <h2>Bring visual launch back to your desktop.</h2>
         <p>
-          {releaseLabel}: {releaseDate}
+          {releaseLabel}: {releaseDate} · Version {currentVersion}
         </p>
-        <p>Version {currentVersion}</p>
       </div>
       <div className="footer-links">
         <Link href={releaseHref}>{releaseText}</Link>

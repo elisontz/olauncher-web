@@ -15,6 +15,7 @@ type PricingSectionProps = {
   subtitle: string;
   tiers: ReadonlyArray<Tier>;
   ctaLabel: string;
+  recommendedTier: "single" | "double";
 };
 
 const priceIdMap = {
@@ -22,19 +23,25 @@ const priceIdMap = {
   double: siteConfig.doublePriceId
 } as const;
 
-export function PricingSection({ heading, subtitle, tiers, ctaLabel }: PricingSectionProps) {
+export function PricingSection({ heading, subtitle, tiers, ctaLabel, recommendedTier }: PricingSectionProps) {
   return (
-    <section className="section-block" id="pricing">
-      <div className="section-copy">
-        <p className="section-label">Pricing</p>
+    <section className="section-shell" id="pricing">
+      <div className="section-heading">
+        <p className="section-kicker">Lifetime Plans</p>
         <h2>{heading}</h2>
         <p>{subtitle}</p>
       </div>
       <div className="pricing-grid">
         {tiers.map((tier) => (
-          <article key={tier.name} className="pricing-card">
-            <h3>{tier.name}</h3>
-            <p className="pricing-description">{tier.description}</p>
+          <article
+            key={tier.name}
+            className={tier.priceId === recommendedTier ? "pricing-card pricing-card-recommended" : "pricing-card"}
+          >
+            <div className="pricing-card-top">
+              {tier.priceId === recommendedTier ? <span className="pricing-badge">Best Value</span> : null}
+              <h3>{tier.name}</h3>
+              <p className="pricing-description">{tier.description}</p>
+            </div>
             <div className="price-row">
               <span className="price">{tier.price}</span>
               <span className="original-price">{tier.originalPrice}</span>
