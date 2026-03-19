@@ -5,6 +5,8 @@ import { SalesPage } from "@/components/sales-page";
 import { getContent } from "@/content";
 import { locales, normalizeLocale } from "@/lib/site";
 
+export const runtime = "edge";
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }

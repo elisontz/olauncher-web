@@ -5,6 +5,8 @@ import { locales, normalizeLocale } from "@/lib/site";
 
 type Params = { locale: string };
 
+export const runtime = "edge";
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
