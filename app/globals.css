@@ -91,7 +91,6 @@ h3,
 
 .eyebrow,
 .section-kicker,
-.scene-eyebrow,
 .contrast-label {
   font-size: 0.75rem;
   letter-spacing: 0.16em;
@@ -101,6 +100,14 @@ h3,
 .eyebrow,
 .section-kicker {
   color: var(--accent);
+}
+
+.site-title {
+  font-family: var(--font-heading), "PingFang SC", sans-serif;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--text);
 }
 
 .header-copy,
@@ -155,24 +162,22 @@ h3,
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
-  gap: 44px;
-  align-items: center;
+  display: block;
 }
 
 .hero-copy {
   display: grid;
   gap: 18px;
   align-content: start;
-  padding: 10px 0;
+  padding: 18px 0 0;
+  max-width: 100%;
 }
 
 h1 {
   display: grid;
   gap: 8px;
-  max-width: 10ch;
-  font-size: clamp(3.6rem, 8vw, 6.4rem);
+  max-width: 12ch;
+  font-size: clamp(4rem, 11vw, 8rem);
   line-height: 0.9;
   letter-spacing: -0.05em;
 }
@@ -182,9 +187,9 @@ h1 {
 }
 
 .lead {
-  max-width: 34rem;
-  font-size: 1.08rem;
-  line-height: 1.8;
+  max-width: 48rem;
+  font-size: 1.12rem;
+  line-height: 1.86;
 }
 
 .hero-actions {
@@ -248,136 +253,6 @@ h1 {
 
 .meta {
   font-size: 0.96rem;
-}
-
-.hero-visual-shell {
-  position: relative;
-  min-height: 640px;
-  overflow: hidden;
-}
-
-.hero-glow {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(4px);
-}
-
-.hero-glow-left {
-  inset: 44px auto auto 22px;
-  width: 180px;
-  height: 180px;
-  background: radial-gradient(circle, rgba(108, 149, 226, 0.36), transparent 68%);
-}
-
-.hero-glow-right {
-  inset: auto 16px 34px auto;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(222, 125, 70, 0.16), transparent 68%);
-}
-
-.scene-stage {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 22px;
-  height: 100%;
-  min-height: 640px;
-  padding: 30px;
-  border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.86);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(239, 243, 248, 0.94) 100%);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
-}
-
-.scene-header,
-.scene-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: flex-start;
-}
-
-.scene-eyebrow,
-.scene-focus-label {
-  color: var(--text-muted);
-}
-
-.scene-title,
-.scene-focus-text {
-  max-width: 18ch;
-  font-family: var(--font-heading), "PingFang SC", sans-serif;
-}
-
-.scene-title {
-  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
-  line-height: 1;
-}
-
-.scene-status {
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(17, 24, 39, 0.06);
-  color: var(--text);
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.scene-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  align-content: start;
-}
-
-.scene-tile {
-  display: grid;
-  align-content: end;
-  gap: 12px;
-  min-height: 104px;
-  padding: 16px;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.86);
-}
-
-.scene-tile[data-size="wide"] {
-  grid-column: span 2;
-}
-
-.scene-tile[data-tone="blue"] {
-  background: linear-gradient(180deg, rgba(121, 162, 239, 0.42) 0%, rgba(255, 255, 255, 0.88) 100%);
-}
-
-.scene-tile[data-tone="silver"] {
-  background: linear-gradient(180deg, rgba(220, 227, 236, 0.92) 0%, rgba(255, 255, 255, 0.84) 100%);
-}
-
-.scene-tile[data-tone="amber"] {
-  background: linear-gradient(180deg, rgba(247, 214, 191, 0.92) 0%, rgba(255, 255, 255, 0.84) 100%);
-}
-
-.scene-tile-dot {
-  width: 18px;
-  height: 18px;
-  border-radius: 6px;
-  background: rgba(17, 24, 39, 0.78);
-}
-
-.scene-tile-label {
-  color: var(--text);
-  font-weight: 600;
-}
-
-.scene-footer {
-  align-self: end;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-}
-
-.scene-focus-text {
-  font-size: 1.02rem;
 }
 
 .story-stage,
@@ -588,14 +463,9 @@ h1 {
 }
 
 @media (max-width: 1024px) {
-  .hero,
   .story-layout,
   .feature-rail-row {
     grid-template-columns: 1fr;
-  }
-
-  .hero-visual-shell {
-    min-height: 580px;
   }
 
   .pricing-band {
@@ -626,24 +496,7 @@ h1 {
 
   h1 {
     max-width: 12ch;
-    font-size: clamp(2.9rem, 17vw, 4.4rem);
-  }
-
-  .hero-visual-shell {
-    min-height: 500px;
-  }
-
-  .scene-stage {
-    min-height: 500px;
-    padding: 22px;
-  }
-
-  .scene-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .scene-tile[data-size="wide"] {
-    grid-column: span 2;
+    font-size: clamp(3.2rem, 16vw, 5rem);
   }
 
   .footer-links {

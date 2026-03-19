@@ -23,8 +23,8 @@ export function SalesPage({ locale }: SalesPageProps) {
       <div className="page-shell">
         <header className="site-header">
           <div className="site-header-copy">
-            <p className="eyebrow">oLauncher</p>
-            <p className="header-copy">A visual launcher for people who still think in grids.</p>
+            <p className="site-title">oLauncher</p>
+            <p className="header-copy">Launchpad for macOS 26.</p>
           </div>
           <LanguageSwitcher locale={locale} />
         </header>
@@ -38,7 +38,6 @@ export function SalesPage({ locale }: SalesPageProps) {
             primaryHref={siteConfig.downloadUrl}
             secondaryPriceId={siteConfig.singlePriceId}
             meta={content.hero.meta}
-            scene={content.hero.scene}
           />
           <StorySection
             heading={content.story.heading}
