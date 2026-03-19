@@ -86,7 +86,7 @@ h3,
 
 .site-header-copy {
   display: grid;
-  gap: 6px;
+  gap: 2px;
 }
 
 .eyebrow,
@@ -104,9 +104,10 @@ h3,
 
 .site-title {
   font-family: var(--font-heading), "PingFang SC", sans-serif;
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 0.88;
+  letter-spacing: -0.06em;
   color: var(--text);
 }
 
@@ -193,14 +194,21 @@ h3,
 
 h1 {
   display: grid;
-  gap: 8px;
-  max-width: 12ch;
-  font-size: clamp(4rem, 11vw, 8rem);
-  line-height: 0.9;
+  gap: 10px;
+  max-width: 15ch;
+  font-size: clamp(3rem, 8vw, 5.9rem);
+  line-height: 0.94;
   letter-spacing: -0.05em;
+  text-wrap: balance;
 }
 
-.hero-subtitle-line {
+.hero-title-main {
+  display: block;
+  word-break: keep-all;
+}
+
+.hero-title-support {
+  display: block;
   color: var(--text-soft);
 }
 
@@ -545,13 +553,17 @@ h1 {
     align-items: flex-start;
   }
 
+  .site-title {
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+  }
+
   .hero {
     gap: 28px;
   }
 
   h1 {
-    max-width: 12ch;
-    font-size: clamp(3.2rem, 16vw, 5rem);
+    max-width: 11ch;
+    font-size: clamp(2.7rem, 14vw, 4.4rem);
   }
 
   .footer-links {

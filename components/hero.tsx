@@ -2,6 +2,7 @@ import Link from "next/link";
 
 type HeroProps = {
   title: string;
+  subtitle: string;
   description: string;
   primaryCta: string;
   secondaryCta: string;
@@ -12,6 +13,7 @@ type HeroProps = {
 
 export function Hero({
   title,
+  subtitle,
   description,
   primaryCta,
   secondaryCta,
@@ -23,7 +25,8 @@ export function Hero({
     <section className="hero">
       <div className="hero-copy">
         <h1>
-          <span>{title}</span>
+          <span className="hero-title-main">{title}</span>
+          <span className="hero-title-support">{subtitle}</span>
         </h1>
         <p className="lead">{description}</p>
         <div className="hero-actions">

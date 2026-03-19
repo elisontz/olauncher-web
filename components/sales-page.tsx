@@ -30,6 +30,7 @@ export function SalesPage({ locale }: SalesPageProps) {
         <main className="content-stack">
           <Hero
             title={content.hero.title}
+            subtitle={content.hero.subtitle}
             description={content.hero.description}
             primaryCta={content.hero.primaryCta}
             secondaryCta={content.hero.secondaryCta}
