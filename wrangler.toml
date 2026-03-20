@@ -6,9 +6,9 @@ pages_build_output_dir = ".vercel/output/static"
 
 [vars]
 NEXT_PUBLIC_DOWNLOAD_URL = "https://github.com/elisontz/oLauncher-Lite/releases/download/v1.0.2/QQ20260318-121541.png.zip"
-NEXT_PUBLIC_PADDLE_ENV = "production"
-NEXT_PUBLIC_PADDLE_CLIENT_TOKEN = "live_533eabe5e463e6967ad999ed617"
-NEXT_PUBLIC_PADDLE_SINGLE_PRICE_ID = "pri_01km2eps325zcxpsfvdehfxftf"
-NEXT_PUBLIC_PADDLE_DOUBLE_PRICE_ID = "pri_01km2evzsh4m92akmm6x9jbdm1"
+NEXT_PUBLIC_PADDLE_ENV = "sandbox"
+NEXT_PUBLIC_PADDLE_CLIENT_TOKEN = "test_1fca214a3ba742fe26a6c259f7b"
+NEXT_PUBLIC_PADDLE_SINGLE_PRICE_ID = "pri_01km5w6hdd1vwt1v7q79956msf"
+NEXT_PUBLIC_PADDLE_DOUBLE_PRICE_ID = "pri_01km5w8gnwp419323cdm63cg39"
 NEXT_PUBLIC_SUPPORT_EMAIL = "elisonyung@gmail.com"
 NEXT_PUBLIC_CURRENT_VERSION = "1.02"
