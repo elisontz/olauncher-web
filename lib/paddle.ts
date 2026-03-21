@@ -50,7 +50,7 @@ export function openCheckout(priceId: string): boolean {
   window.Paddle?.Checkout?.open({
     items: [{ priceId, quantity: 1 }],
     customData: {
-      source: "olauncher-site"
+      source: "liqunch-site"
     }
   });
 

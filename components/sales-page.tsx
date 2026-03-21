@@ -25,8 +25,8 @@ export function SalesPage({ locale }: SalesPageProps) {
       <div className="page-shell">
         <header className="site-header">
           <div className="site-header-copy">
-            <Image src="/images/logo.png" alt="oLauncher Logo" width={40} height={40} className="site-logo" />
-            <p className="site-title">oLauncher</p>
+            <Image src="/images/logo.png" alt="Liqunch Logo" width={40} height={40} className="site-logo" />
+            <p className="site-title">Liqunch</p>
           </div>
           <LanguageSwitcher locale={locale} />
         </header>
@@ -51,7 +51,7 @@ export function SalesPage({ locale }: SalesPageProps) {
             <div className="story-image-container">
               <Image 
                 src="/images/Full-screen mode main image.jpg" 
-                alt="oLauncher Interface" 
+                alt="Liqunch Interface" 
                 width={1200} 
                 height={800} 
                 className="story-image"

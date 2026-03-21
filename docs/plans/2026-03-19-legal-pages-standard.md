@@ -13,8 +13,8 @@
 ### Task 1: Add failing legal structure tests
 
 **Files:**
-- Modify: `olauncher-web/tests/legal-copy.test.ts`
-- Test: `olauncher-web/tests/legal-copy.test.ts`
+- Modify: `liqunch-web/tests/legal-copy.test.ts`
+- Test: `liqunch-web/tests/legal-copy.test.ts`
 
 **Step 1: Write the failing test**
 
@@ -31,9 +31,9 @@ Expected: FAIL because the current content only exposes single-paragraph bodies.
 ### Task 2: Add standard legal sections to localized content
 
 **Files:**
-- Modify: `olauncher-web/content/en.ts`
-- Modify: `olauncher-web/content/zh.ts`
-- Test: `olauncher-web/tests/legal-copy.test.ts`
+- Modify: `liqunch-web/content/en.ts`
+- Modify: `liqunch-web/content/zh.ts`
+- Test: `liqunch-web/tests/legal-copy.test.ts`
 
 **Step 1: Write minimal implementation**
 
@@ -53,9 +53,9 @@ Expected: PASS
 ### Task 3: Render structured legal sections
 
 **Files:**
-- Modify: `olauncher-web/app/[locale]/privacy/page.tsx`
-- Modify: `olauncher-web/app/[locale]/terms/page.tsx`
-- Modify: `olauncher-web/app/globals.css`
+- Modify: `liqunch-web/app/[locale]/privacy/page.tsx`
+- Modify: `liqunch-web/app/[locale]/terms/page.tsx`
+- Modify: `liqunch-web/app/globals.css`
 
 **Step 1: Render titled legal sections**
 

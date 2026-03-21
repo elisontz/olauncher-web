@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "oLauncher",
+  title: "Liqunch",
   description: "A lightweight launchpad-style launcher for macOS 26 and later."
 };
 

@@ -1,6 +1,6 @@
 # Standard Legal Pages Design
 
-**Goal:** Expand the Privacy Policy and Terms of Service into standard commercial website legal pages without over-claiming features or commitments that `oLauncher` does not currently have.
+**Goal:** Expand the Privacy Policy and Terms of Service into standard commercial website legal pages without over-claiming features or commitments that `Liqunch` does not currently have.
 
 **Scope:** Keep the existing routes and overall page shell. Replace single-paragraph legal copy with structured sections and short paragraphs for the English and Chinese locales.
 

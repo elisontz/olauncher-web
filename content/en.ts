@@ -1,7 +1,7 @@
 const en = {
   locale: "en",
   seo: {
-    title: "oLauncher for Mac | Bring back a familiar Launchpad experience on macOS 26",
+    title: "Liqunch for Mac | Bring back a familiar Launchpad experience on macOS 26",
     description:
       "A lightweight app launcher that restores the visual browsing workflow many Mac users still want on macOS 26."
   },
@@ -9,7 +9,7 @@ const en = {
     title: "Bring Back Launchpad",
     subtitle: "for macOS Tahoe",
     description:
-      "oLauncher brings back the classic way of launching apps that many people still miss to macOS Tahoe: \n glance across a grid, trust your spatial memory, and launch without switching mental modes.",
+      "Liqunch brings back the classic way of launching apps that many people still miss to macOS Tahoe: \n glance across a grid, trust your spatial memory, and launch without switching mental modes.",
     primaryCta: "Download Free",
     secondaryCta: "Buy PRO",
     meta: "Runs on macOS 26 and later",
@@ -36,7 +36,7 @@ const en = {
     paragraphs: [
       "Launchpad was never just a different way to open apps. It gave people a visual map of their tools, and that map stayed in muscle memory.",
       "When that map disappears, the problem is not speed alone. The desktop loses a quiet, spatial layer that made a Mac feel predictable.",
-      "oLauncher brings that layer back in a form that feels lighter, sharper, and more intentional for modern macOS."
+      "Liqunch brings that layer back in a form that feels lighter, sharper, and more intentional for modern macOS."
     ],
     contrastLines: [
       {
@@ -48,13 +48,13 @@ const en = {
         detail: "not because they need one more launcher, but because the familiar one stopped fitting their routine."
       },
       {
-        label: "What oLauncher keeps",
+        label: "What Liqunch keeps",
         detail: "A grid-first desktop rhythm that still feels native, fast, and calm."
       }
     ]
   },
   featureRail: {
-    heading: "Key Features of oLauncher",
+    heading: "Key Features of Liqunch",
     items: [
       {
         title: "Built natively in Swift",
@@ -141,7 +141,7 @@ const en = {
     },
     {
       question: "What macOS versions are supported?",
-      answer: "oLauncher currently targets macOS 26 and later."
+      answer: "Liqunch currently targets macOS 26 and later."
     },
     {
       question: "Can I request a refund?",
@@ -166,7 +166,7 @@ const en = {
   legal: {
     privacyTitle: "Privacy Policy",
     privacyBody:
-      "This Privacy Policy explains what information oLauncher collects through the oLauncher website, how that information is used, and how you can contact us about privacy-related questions.",
+      "This Privacy Policy explains what information Liqunch collects through the Liqunch website, how that information is used, and how you can contact us about privacy-related questions.",
     privacySections: [
       {
         heading: "What Information We Collect",
@@ -185,7 +185,7 @@ const en = {
       {
         heading: "Payments Through Paddle",
         paragraphs: [
-          "Payments for oLauncher are processed by Paddle, which acts as the merchant of record for purchases made through the website.",
+          "Payments for Liqunch are processed by Paddle, which acts as the merchant of record for purchases made through the website.",
           "When you complete a purchase, Paddle may collect billing, payment, and transaction information in accordance with its own buyer terms, privacy policy, and compliance obligations."
         ]
       },
@@ -212,19 +212,19 @@ const en = {
     ],
     termsTitle: "Terms of Service",
     termsBody:
-      "These Terms of Service explain the basic rules for using the oLauncher website, downloading the app, purchasing licenses, and using paid features made available by oLauncher.",
+      "These Terms of Service explain the basic rules for using the Liqunch website, downloading the app, purchasing licenses, and using paid features made available by Liqunch.",
     termsSections: [
       {
         heading: "Who These Terms Apply To",
         paragraphs: [
-          "These Terms apply to oLauncher, the oLauncher website, and the related products and services provided by oLauncher.",
+          "These Terms apply to Liqunch, the Liqunch website, and the related products and services provided by Liqunch.",
           "By accessing the website, downloading the app, or purchasing a license, you agree to these Terms."
         ]
       },
       {
         heading: "License and Permitted Use",
         paragraphs: [
-          "When you purchase a license, you may activate and use oLauncher on the number of Macs included in the purchased tier.",
+          "When you purchase a license, you may activate and use Liqunch on the number of Macs included in the purchased tier.",
           "The software is licensed, not sold. You may use it for your own personal or internal business use, subject to these Terms."
         ]
       },
@@ -238,7 +238,7 @@ const en = {
       {
         heading: "Restrictions",
         paragraphs: [
-          "You may not copy, resell, sublicense, distribute, reverse engineer, or misuse oLauncher except where applicable law clearly permits it.",
+          "You may not copy, resell, sublicense, distribute, reverse engineer, or misuse Liqunch except where applicable law clearly permits it.",
           "You may not attempt to bypass license checks, interfere with the website or checkout flow, or use the service in a way that harms the product, infrastructure, or other users."
         ]
       },
@@ -252,7 +252,7 @@ const en = {
       {
         heading: "Liability and Contact",
         paragraphs: [
-          "oLauncher and the website are provided on an as-available basis. To the maximum extent permitted by law, we are not liable for indirect or consequential losses arising from use of the website or software.",
+          "Liqunch and the website are provided on an as-available basis. To the maximum extent permitted by law, we are not liable for indirect or consequential losses arising from use of the website or software.",
           "If you have legal or support questions about these Terms, contact elisonyung@gmail.com."
         ]
       }

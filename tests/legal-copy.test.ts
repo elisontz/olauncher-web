@@ -3,9 +3,9 @@ import { describe, expect, it } from "vitest";
 import { getContent } from "@/content";
 
 describe("legal copy", () => {
-  it("mentions oLauncher clearly in both locale terms", () => {
-    expect(getContent("zh").legal.termsBody).toContain("oLauncher");
-    expect(getContent("en").legal.termsBody).toContain("oLauncher");
+  it("mentions Liqunch clearly in both locale terms", () => {
+    expect(getContent("zh").legal.termsBody).toContain("Liqunch");
+    expect(getContent("en").legal.termsBody).toContain("Liqunch");
   });
 
   it("provides Paddle-aligned refund policy windows in both locales", () => {

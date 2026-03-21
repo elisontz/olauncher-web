@@ -1,7 +1,7 @@
 const zh = {
   locale: "zh",
   seo: {
-    title: "oLauncher for Mac | 在 macOS 26 上带回熟悉的 Launchpad 体验",
+    title: "Liqunch for Mac | 在 macOS 26 上带回熟悉的 Launchpad 体验",
     description:
       "一个轻量的第三方应用启动台，让仍然依赖视觉浏览的 Mac 用户在 macOS 26 上找回熟悉的启动体验。"
   },
@@ -9,7 +9,7 @@ const zh = {
     title: "找回 Launchpad",
     subtitle: "给 macOS Tahoe",
     description:
-      "oLauncher 把很多人依然怀念的经典App启动方式带回macOS Tahoe：\n看一眼网格、靠空间记忆定位、顺手打开，而不是被迫切成搜索式操作。",
+      "Liqunch 把很多人依然怀念的经典App启动方式带回macOS Tahoe：\n看一眼网格、靠空间记忆定位、顺手打开，而不是被迫切成搜索式操作。",
     primaryCta: "免费下载",
     secondaryCta: "购买 PRO 版",
     meta: "支持 macOS 26 及更高版本",
@@ -36,7 +36,7 @@ const zh = {
     paragraphs: [
       "Launchpad 从来不只是另一种打开 App 的方式。它更像一张视觉地图，让人靠位置和顺序去记住桌面上的工具。",
       "当这张地图消失后，损失的不只是效率，而是 Mac 使用里那层很安静、很顺手的空间感。",
-      "oLauncher 做的不是怀旧复刻，而是把这层体验用更轻、更准、更现代的方式重新安回 macOS。"
+      "Liqunch 做的不是怀旧复刻，而是把这层体验用更轻、更准、更现代的方式重新安回 macOS。"
     ],
     contrastLines: [
       {
@@ -48,13 +48,13 @@ const zh = {
         detail: "不是为了多一种启动方式，而是熟悉的那一种突然不再适合日常节奏。"
       },
       {
-        label: "oLauncher 保留的",
+        label: "Liqunch 保留的",
         detail: "仍然像原生体验一样平静、直接、依赖空间记忆的网格启动感。"
       }
     ]
   },
   featureRail: {
-    heading: "oLauncher 主要特色功能",
+    heading: "Liqunch 主要特色功能",
     items: [
       {
         title: "Swift原生语言开发",
@@ -141,7 +141,7 @@ const zh = {
     },
     {
       question: "支持哪些 macOS 版本？",
-      answer: "当前版本面向 macOS 26 及以上系统。"
+      answer: "Liqunch 当前版本面向 macOS 26 及以上系统。"
     },
     {
       question: "支持退款吗？",
@@ -166,7 +166,7 @@ const zh = {
   legal: {
     privacyTitle: "隐私政策",
     privacyBody:
-      "本隐私政策说明 oLauncher 通过 oLauncher 官网收集哪些信息、这些信息如何被使用，以及你可以如何就隐私相关问题联系我们。",
+      "本隐私政策说明 Liqunch 通过 Liqunch 官网收集哪些信息、这些信息如何被使用，以及你可以如何就隐私相关问题联系我们。",
     privacySections: [
       {
         heading: "我们收集的信息",
@@ -185,7 +185,7 @@ const zh = {
       {
         heading: "通过 Paddle 处理付款",
         paragraphs: [
-          "oLauncher 官网中的付款由 Paddle 处理，Paddle 作为通过本网站完成购买时的 merchant of record。",
+          "Liqunch 官网中的付款由 Paddle 处理，Paddle 作为通过本网站完成购买时的 merchant of record。",
           "当你完成购买时，Paddle 可能会根据其自身的买家条款、隐私政策和合规义务收集账单、支付和交易信息。"
         ]
       },
@@ -212,19 +212,19 @@ const zh = {
     ],
     termsTitle: "使用条款",
     termsBody:
-      "本使用条款说明使用 oLauncher 官网、下载 App、购买授权以及使用由 oLauncher 提供的付费功能时适用的基本规则。",
+      "本使用条款说明使用 Liqunch 官网、下载 App、购买授权以及使用由 Liqunch 提供的付费功能时适用的基本规则。",
     termsSections: [
       {
         heading: "条款适用范围",
         paragraphs: [
-          "这些条款适用于 oLauncher、oLauncher 官网，以及由 oLauncher 提供的相关产品与服务。",
+          "这些条款适用于 Liqunch、Liqunch 官网，以及由 Liqunch 提供的相关产品与服务。",
           "当你访问官网、下载 App 或购买授权时，即表示你同意受这些条款约束。"
         ]
       },
       {
         heading: "许可与允许的使用方式",
         paragraphs: [
-          "购买授权后，你可以在所购买档位对应数量的 Mac 设备上激活并使用 oLauncher。",
+          "购买授权后，你可以在所购买档位对应数量的 Mac 设备上激活并使用 Liqunch。",
           "软件以许可方式提供，而非出售。你可以将其用于个人用途或内部业务用途，但应遵守这些条款。"
         ]
       },
@@ -238,7 +238,7 @@ const zh = {
       {
         heading: "限制事项",
         paragraphs: [
-          "除非适用法律明确允许，否则你不得复制、转售、再许可、分发、反向工程或以其他方式滥用 oLauncher。",
+          "除非适用法律明确允许，否则你不得复制、转售、再许可、分发、反向工程或以其他方式滥用 Liqunch。",
           "你不得尝试绕过授权校验、干扰官网或支付流程，也不得以损害产品、基础设施或其他用户的方式使用服务。"
         ]
       },
@@ -252,14 +252,14 @@ const zh = {
       {
         heading: "责任与联系",
         paragraphs: [
-          "在适用法律允许的最大范围内，oLauncher 及官网按现状和可用状态提供。对于因使用官网或软件产生的间接或后果性损失，我们不承担责任。",
+          "在适用法律允许的最大范围内，Liqunch 及官网按现状和可用状态提供。对于因使用官网或软件产生的间接或后果性损失，我们不承担责任。",
           "如果你对这些条款有法律或支持相关问题，请发送邮件至 elisonyung@gmail.com。"
         ]
       }
     ],
     refundTitle: "退款政策",
     refundBody:
-      "通过 Paddle 购买 oLauncher 的订单，退款按照 Paddle Buyer Terms 和 Paddle Refund Policy 处理。欧盟、欧洲经济区、瑞士、英国、土耳其和以色列的消费者可在交易日期后 14 天内申请退款。韩国、巴西、中国和加拿大的消费者可在交易日期后 7 天内申请退款。新加坡的消费者可在交易日期后 5 天内申请退款。退款可通过 Paddle 收据邮件中的链接或 paddle.net 提交。"
+      "通过 Paddle 购买 Liqunch 的订单，退款按照 Paddle Buyer Terms 和 Paddle Refund Policy 处理。欧盟、欧洲经济区、瑞士、英国、土耳其和以色列的消费者可在交易日期后 14 天内申请退款。韩国、巴西、中国和加拿大的消费者可在交易日期后 7 天内申请退款。新加坡的消费者可在交易日期后 5 天内申请退款。退款可通过 Paddle 收据邮件中的链接或 paddle.net 提交。"
   },
   release: {
     title: "更新日志",

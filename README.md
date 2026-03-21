@@ -1,10 +1,10 @@
-# oLauncher Site
+# Liqunch Site
 
-Marketing and commerce site for `oLauncher`.
+Marketing and commerce site for `Liqunch`.
 
 Production site:
 
-- [https://olauncher.tayueke.cn](https://olauncher.tayueke.cn)
+- [https://liqunch.tayueke.cn](https://liqunch.tayueke.cn)
 
 ## Scope
 
@@ -17,8 +17,8 @@ This repository contains the public website only:
 
 The app and licensing backend live in separate repositories:
 
-- App: [`oLauncher`](https://github.com/elisontz/oLauncher)
-- Licensing service: [`olauncher-licensing-service`](https://github.com/elisontz/olauncher-licensing-service)
+- App: [`Liqunch`](https://github.com/elisontz/Liqunch)
+- Licensing service: [`liqunch-licensing-service`](https://github.com/elisontz/liqunch-licensing-service)
 
 ## Stack
 
@@ -31,7 +31,7 @@ The app and licensing backend live in separate repositories:
 ## Current status
 
 - The site is deployed on Cloudflare Pages.
-- The custom domain `olauncher.tayueke.cn` is active.
+- The custom domain `liqunch.tayueke.cn` is active.
 - Paddle website review pages have been added.
 - The final download URL is still intended to be updated when the release DMG is finalized.
 

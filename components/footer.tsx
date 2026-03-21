@@ -22,7 +22,7 @@ export function Footer({
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <p className="eyebrow">oLauncher</p>
+        <p className="eyebrow">Liqunch</p>
       </div>
       <div className="footer-links">
         <Link href={`/${locale}/privacy`}>{privacyText}</Link>

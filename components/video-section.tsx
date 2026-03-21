@@ -39,7 +39,7 @@ export function VideoSection({ locale }: VideoSectionProps) {
           width="100%"
           height="100%"
           src={sources[source]}
-          title="oLauncher Video"
+          title="Liqunch Video"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen

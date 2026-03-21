@@ -1,4 +1,4 @@
-# oLauncher Site Deployment
+# Liqunch Site Deployment
 
 ## Overview
 
@@ -33,13 +33,13 @@ Set these in Cloudflare Pages before the first production deploy:
 
 Recommended bucket name:
 
-- `olauncher-downloads`
+- `liqunch-downloads`
 
 Recommended object paths:
 
-- `stable/oLauncher-YYYYMMDD.dmg`
-- `beta/oLauncher-YYYYMMDD-beta.dmg`
-- `media/oLauncher-media-kit.zip`
+- `stable/Liqunch-YYYYMMDD.dmg`
+- `beta/Liqunch-YYYYMMDD-beta.dmg`
+- `media/Liqunch-media-kit.zip`
 
 Point `NEXT_PUBLIC_DOWNLOAD_URL` at the public `stable` object URL.
 
@@ -47,8 +47,8 @@ Point `NEXT_PUBLIC_DOWNLOAD_URL` at the public `stable` object URL.
 
 Create two one-time products:
 
-- `oLauncher Single Device Lifetime`
-- `oLauncher Two Devices Lifetime`
+- `Liqunch Single Device Lifetime`
+- `Liqunch Two Devices Lifetime`
 
 Map their price IDs to:
 
