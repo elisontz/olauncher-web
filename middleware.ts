@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { locales, defaultLocale } from "./lib/site";
+
+// Define constants locally to avoid importing from lib/site, which might cause 
+// issues in the Edge Runtime on certain platforms if the file is too complex.
+const locales = ["zh", "en"];
+const defaultLocale = "zh";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -20,10 +24,7 @@ export function middleware(request: NextRequest) {
       // Simple language detection logic
       const languages = acceptLanguage.toLowerCase();
       if (languages.includes("en")) {
-        // If English is found, we might want to check its priority or just prefer it
-        // For Liqunch, if 'zh' is present anywhere, we might still prefer 'zh' for CN users
         if (languages.includes("zh")) {
-          // If both present, check which one comes first or is the main one
           const zhIndex = languages.indexOf("zh");
           const enIndex = languages.indexOf("en");
           preferredLocale = zhIndex < enIndex ? "zh" : "en";
