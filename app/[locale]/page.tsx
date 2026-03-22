@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import { SalesPage } from "@/components/sales-page";
 import { getContent } from "@/content";
-import { locales, normalizeLocale } from "@/lib/site";
+import { locales, normalizeLocale, getLatestReleaseInfo } from "@/lib/site";
 
 export const runtime = "edge";
 
@@ -30,6 +30,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<Param
     notFound();
   }
   const normalized = normalizeLocale(locale);
+  const releaseInfo = await getLatestReleaseInfo(normalized);
 
-  return <SalesPage locale={normalized} />;
+  return <SalesPage locale={normalized} releaseInfo={releaseInfo} />;
 }

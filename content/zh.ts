@@ -161,7 +161,8 @@ const zh = {
     privacyText: "隐私政策",
     termsText: "使用条款",
     refundText: "退款政策",
-    contactText: "联系我们"
+    contactText: "联系我们",
+    alternativeDownloadLabel: "备用下载地址"
   },
   legal: {
     privacyTitle: "隐私政策",
@@ -263,17 +264,7 @@ const zh = {
   },
   release: {
     title: "更新日志",
-    entries: [
-      {
-        version: "1.0.2",
-        date: "2026-03-19",
-        notes: [
-          "优化网格间距与悬停反馈，提升视觉浏览效率。",
-          "统一 App 内激活文案与官网购买链路说明。",
-          "加强直接下载的公证 DMG 分发流程。"
-        ]
-      }
-    ]
+    entries: []
   }
 } as const;
 

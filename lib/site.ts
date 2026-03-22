@@ -34,5 +34,90 @@ export const siteConfig = {
   paddleClientToken: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN || "",
   singlePriceId: requiredEnv("NEXT_PUBLIC_PADDLE_SINGLE_PRICE_ID", "pri_single_device"),
   doublePriceId: requiredEnv("NEXT_PUBLIC_PADDLE_DOUBLE_PRICE_ID", "pri_two_devices"),
-  releaseDate: "2026-03-19"
+  releaseDate: "2026-03-19",
+  alternativeDownloadUrl: "https://pan.baidu.com/s/12wA2Trbwoz9j71kN4lghTg?pwd=kgve",
+  copyright: "© 2026 Tayueke. All rights reserved."
 } as const;
+
+export type ReleaseInfo = {
+  downloadUrl: string;
+  version: string;
+  date: string;
+  notes: string[];
+};
+
+export function parseReleaseBody(body: string | null, locale: string): string[] {
+  if (!body) return [];
+
+  const zhMatch = body.match(/\[zh\]([\s\S]*?)(?=\[en\]|$)/i);
+  const enMatch = body.match(/\[en\]([\s\S]*?)(?=\[zh\]|$)/i);
+
+  let content = body;
+  if (locale === "zh" && zhMatch) {
+    content = zhMatch[1];
+  } else if (locale === "en" && enMatch) {
+    content = enMatch[1];
+  } else if (zhMatch || enMatch) {
+    // If tags exist but no match for current locale, try to find the other one or default to whole
+    content = (zhMatch ? zhMatch[1] : enMatch?.[1]) || body;
+  }
+
+  return content
+    .split("\n")
+    .map((line) => line.replace(/^-\s*/, "").trim())
+    .filter((line) => line.length > 0);
+}
+
+export async function getLatestReleaseInfo(locale: string = "zh"): Promise<ReleaseInfo> {
+  const fallback: ReleaseInfo = {
+    downloadUrl: siteConfig.downloadUrl,
+    version: siteConfig.currentVersion,
+    date: siteConfig.releaseDate,
+    notes: []
+  };
+
+  try {
+    const res = await fetch("https://api.github.com/repos/elisontz/Liqunch-Lite/releases/latest", {
+      next: { revalidate: 3600 }
+    });
+    
+    if (!res.ok) return fallback;
+
+    const data = await res.json();
+    const asset = data.assets?.find((a: any) => a.name.endsWith(".dmg"));
+    
+    return {
+      downloadUrl: asset?.browser_download_url || fallback.downloadUrl,
+      version: data.tag_name?.replace(/^v/, "") || fallback.version,
+      date: data.published_at ? new Date(data.published_at).toISOString().split("T")[0] : fallback.date,
+      notes: parseReleaseBody(data.body, locale)
+    };
+  } catch (error) {
+    console.error("Failed to fetch latest release:", error);
+    return fallback;
+  }
+}
+
+export async function getAllReleases(locale: string = "zh"): Promise<ReleaseInfo[]> {
+  try {
+    const res = await fetch("https://api.github.com/repos/elisontz/Liqunch-Lite/releases", {
+      next: { revalidate: 3600 }
+    });
+    
+    if (!res.ok) return [];
+
+    const data = await res.json();
+    return data.map((release: any) => {
+      const asset = release.assets?.find((a: any) => a.name.endsWith(".dmg"));
+      return {
+        downloadUrl: asset?.browser_download_url || "",
+        version: release.tag_name?.replace(/^v/, "") || "",
+        date: release.published_at ? new Date(release.published_at).toISOString().split("T")[0] : "",
+        notes: parseReleaseBody(release.body, locale)
+      };
+    });
+  } catch (error) {
+    console.error("Failed to fetch all releases:", error);
+    return [];
+  }
+}

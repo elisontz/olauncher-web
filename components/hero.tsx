@@ -14,6 +14,8 @@ type HeroProps = {
   currentVersion: string;
   versionLabel: string;
   releaseHref: string;
+  alternativeDownloadHref?: string;
+  alternativeDownloadLabel?: string;
 };
 
 export function Hero({
@@ -29,7 +31,9 @@ export function Hero({
   releaseDate,
   currentVersion,
   versionLabel,
-  releaseHref
+  releaseHref,
+  alternativeDownloadHref,
+  alternativeDownloadLabel
 }: HeroProps) {
   return (
     <section className="hero">
@@ -55,6 +59,14 @@ export function Hero({
             <span className="meta-separator">·</span>
             <span>{versionLabel} {currentVersion}</span>
           </Link>
+          {alternativeDownloadHref && alternativeDownloadLabel && (
+            <>
+              <span className="meta-separator">·</span>
+              <Link href={alternativeDownloadHref} className="meta-link" target="_blank">
+                {alternativeDownloadLabel}
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </section>

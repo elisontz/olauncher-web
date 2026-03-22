@@ -9,6 +9,7 @@ type FooterProps = {
   refundText: string;
   contactText: string;
   supportEmail: string;
+  copyright: string;
 };
 
 export function Footer({
@@ -17,12 +18,13 @@ export function Footer({
   termsText,
   refundText,
   contactText,
-  supportEmail
+  supportEmail,
+  copyright
 }: FooterProps) {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <p className="eyebrow">Liqunch</p>
+        <p className="copyright">{copyright}</p>
       </div>
       <div className="footer-links">
         <Link href={`/${locale}/privacy`}>{privacyText}</Link>

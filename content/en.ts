@@ -161,7 +161,8 @@ const en = {
     privacyText: "Privacy Policy",
     termsText: "Terms of Service",
     refundText: "Refund Policy",
-    contactText: "Contact Us"
+    contactText: "Contact Us",
+    alternativeDownloadLabel: "Alternative Download"
   },
   legal: {
     privacyTitle: "Privacy Policy",
@@ -263,17 +264,7 @@ const en = {
   },
   release: {
     title: "Release Notes",
-    entries: [
-      {
-        version: "1.0.2",
-        date: "2026-03-19",
-        notes: [
-          "Refined grid spacing and hover feedback for faster browsing.",
-          "Improved activation copy inside the app to match the website flow.",
-          "Hardened notarized DMG distribution for direct downloads."
-        ]
-      }
-    ]
+    entries: []
   }
 } as const;
 

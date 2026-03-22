@@ -10,14 +10,18 @@ import { PricingSection } from "@/components/pricing-section";
 // import { VideoSection } from "@/components/video-section";
 // import { StorySection } from "@/components/story-section";
 import { getContent } from "@/content";
-import { siteConfig, type Locale } from "@/lib/site";
+import { siteConfig, type Locale, type ReleaseInfo } from "@/lib/site";
 
 type SalesPageProps = {
   locale: Locale;
+  releaseInfo?: ReleaseInfo;
 };
 
-export function SalesPage({ locale }: SalesPageProps) {
+export function SalesPage({ locale, releaseInfo }: SalesPageProps) {
   const content = getContent(locale);
+  const finalDownloadUrl = releaseInfo?.downloadUrl || siteConfig.downloadUrl;
+  const finalVersion = releaseInfo?.version || siteConfig.currentVersion;
+  const finalDate = releaseInfo?.date || siteConfig.releaseDate;
 
   return (
     <>
@@ -37,14 +41,16 @@ export function SalesPage({ locale }: SalesPageProps) {
             description={content.hero.description}
             primaryCta={content.hero.primaryCta}
             secondaryCta={content.hero.secondaryCta}
-            primaryHref={siteConfig.downloadUrl}
+            primaryHref={finalDownloadUrl}
             secondaryHref="#pricing"
             meta={content.hero.meta}
             releaseLabel={content.footer.releaseLabel}
-            releaseDate={siteConfig.releaseDate}
-            currentVersion={siteConfig.currentVersion}
+            releaseDate={finalDate}
+            currentVersion={finalVersion}
             versionLabel={content.footer.releaseVersion}
             releaseHref={content.footer.releaseHref}
+            alternativeDownloadHref={siteConfig.alternativeDownloadUrl}
+            alternativeDownloadLabel={content.footer.alternativeDownloadLabel}
           />
 {/* <VideoSection locale={locale} /> */}
           <section className="story-image-section">
@@ -75,6 +81,7 @@ export function SalesPage({ locale }: SalesPageProps) {
           refundText={content.footer.refundText}
           contactText={content.footer.contactText}
           supportEmail={siteConfig.supportEmail}
+          copyright={siteConfig.copyright}
         />
       </div>
     </>
