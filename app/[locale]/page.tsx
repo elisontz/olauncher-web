@@ -3,9 +3,9 @@ import { notFound } from "next/navigation";
 
 import { SalesPage } from "@/components/sales-page";
 import { getContent } from "@/content";
-import { locales, normalizeLocale, getLatestReleaseInfo } from "@/lib/site";
+import { locales, normalizeLocale, getLatestReleaseInfo, siteConfig } from "@/lib/site";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 type Params = { locale: string };
 
@@ -30,7 +30,15 @@ export default async function LocaleHomePage({ params }: { params: Promise<Param
     notFound();
   }
   const normalized = normalizeLocale(locale);
-  const releaseInfo = await getLatestReleaseInfo(normalized);
+  
+  // DEBUG: Disable API call
+  // const releaseInfo = await getLatestReleaseInfo(normalized);
+  const releaseInfo = {
+    downloadUrl: siteConfig.downloadUrl,
+    version: siteConfig.currentVersion,
+    date: siteConfig.releaseDate,
+    notes: []
+  };
 
   return <SalesPage locale={normalized} releaseInfo={releaseInfo} />;
 }
