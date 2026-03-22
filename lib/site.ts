@@ -68,6 +68,18 @@ export function parseReleaseBody(body: string | null, locale: string): string[] 
     .filter((line) => line.length > 0);
 }
 
+function getGitHubHeaders() {
+  const headers: Record<string, string> = {
+    "User-Agent": "Liqunch-Site",
+    Accept: "application/vnd.github.v3+json"
+  };
+  const token = process.env.GITHUB_TOKEN;
+  if (token) {
+    headers["Authorization"] = `token ${token}`;
+  }
+  return headers;
+}
+
 export async function getLatestReleaseInfo(locale: string = "zh"): Promise<ReleaseInfo> {
   const fallback: ReleaseInfo = {
     downloadUrl: siteConfig.downloadUrl,
@@ -78,13 +90,14 @@ export async function getLatestReleaseInfo(locale: string = "zh"): Promise<Relea
 
   try {
     const res = await fetch("https://api.github.com/repos/elisontz/Liqunch-Lite/releases/latest", {
-      headers: {
-        "User-Agent": "Liqunch-Site"
-      },
+      headers: getGitHubHeaders(),
       next: { revalidate: 3600 }
     });
     
-    if (!res.ok) return fallback;
+    if (!res.ok) {
+      console.warn(`GitHub API returned ${res.status} for latest release`);
+      return fallback;
+    }
 
     const data = await res.json();
     const asset = data.assets?.find((a: any) => a.name.endsWith(".dmg"));
@@ -104,13 +117,14 @@ export async function getLatestReleaseInfo(locale: string = "zh"): Promise<Relea
 export async function getAllReleases(locale: string = "zh"): Promise<ReleaseInfo[]> {
   try {
     const res = await fetch("https://api.github.com/repos/elisontz/Liqunch-Lite/releases", {
-      headers: {
-        "User-Agent": "Liqunch-Site"
-      },
+      headers: getGitHubHeaders(),
       next: { revalidate: 3600 }
     });
     
-    if (!res.ok) return [];
+    if (!res.ok) {
+      console.warn(`GitHub API returned ${res.status} for all releases`);
+      return [];
+    }
 
     const data = await res.json();
     return data.map((release: any) => {
